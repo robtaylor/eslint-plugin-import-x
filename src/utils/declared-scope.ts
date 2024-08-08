@@ -6,7 +6,7 @@ export function declaredScope(
   context: RuleContext,
   node: TSESTree.Node,
   name: string,
-) {
+) : Reference {
   const references = context.sourceCode.getScope(node).references
   const reference = references.find(x => x.identifier.name === name)
   if (!reference || !reference.resolved) {
