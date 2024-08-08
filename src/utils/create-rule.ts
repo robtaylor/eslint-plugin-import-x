@@ -14,7 +14,7 @@ type MetaDataDocsWithCategory<Options extends readonly unknown[]> = {
     | TSESLint.RuleRecommendation
     | TSESLint.RuleRecommendationAcrossConfigs<Options>
     | boolean
-} & Omit<TSESLint.RuleMetaDataDocs<Options>, 'recommended'>
+} & Omit<TSESLint.RuleMetaDataDocs, 'recommended'>
 
 // TSESLint.RuleMetaData, but with "docs" property overriden for eslint-doc-generator
 type MetadataWithCustomDocs<
